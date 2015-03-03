@@ -8,4 +8,4 @@ npm install laravel-elixir-hologram --save-dev
 
 ###Hologram — Style Documentation Build System
 
-To learn more about Hologram visit (https://github.com/trulia/hologram)
+To learn more about Hologram visit https://github.com/trulia/hologram
