@@ -18,7 +18,7 @@ elixir.extend('hologram', function(options) {
 	};
 
 	gulp.task('hologram', function() {
-		gulp.src(config.yml)
+		gulp.src(options.yml)
 			.pipe(hologram())
 			.on('error', onError)
 			.pipe(new Notification().message('Hologram Complete!'));

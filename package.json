@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-hologram",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Laravel Elixir Hologram Extension",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,6 @@
     "gulp-notify": "^2.0.0",
     "underscore": "^1.7.0"
   },
-  "_from": "laravel-elixir-hologram@*"
+  "_from": "laravel-elixir-hologram@*",
+  "devDependencies": {}
 }
