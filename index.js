@@ -24,5 +24,11 @@ elixir.extend('hologram', function(options) {
 			.pipe(new Notification().message('Hologram Complete!'));
 	});
 
+	this.registerWatcher('hologram', [
+		this.assetsDir + 'sass/**/*',
+		this.assetsDir + 'scss/**/*',
+		this.assetsDir + 'less/**/*',
+	]);
+
 	return this.queueTask('hologram');
 });

@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-hologram",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Laravel Elixir Hologram Extension",
   "main": "index.js",
   "scripts": {
