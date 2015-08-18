@@ -2,7 +2,7 @@
 # All paths should be relative to there
 
 # The directory containing the source files to parse recursively
-source: ../../resources/assets/less
+source: ../../resources/assets/scss
 
 # You may alternately specify multiple directories.
 # source:
