@@ -1,10 +1,9 @@
 var gulp = require('gulp'),
-	elixir = require('laravel-elixir'),
-	Notification = require('laravel-elixir/ingredients/commands/Notification'),
+	Elixir = require('laravel-elixir'),
 	hologram = require('gulp-hologram'),
 	_ = require('underscore');
 
-elixir.extend('hologram', function(options) {
+Elixir.extend('hologram', function(options) {
 
 	var defaultOptions = {
 		yml: './node_modules/laravel-elixir-hologram/config.yml'
@@ -12,23 +11,18 @@ elixir.extend('hologram', function(options) {
 
 	options = _.extend(defaultOptions, options);
 
-	var onError = function(e) {
-		new Notification().error(e, 'Failed!');
-		this.emit('end');
-	};
-
-	gulp.task('hologram', function() {
+	new Elixir.Task('hologram', function() {
 		gulp.src(options.yml)
 			.pipe(hologram())
-			.on('error', onError)
-			.pipe(new Notification().message('Hologram Complete!'));
-	});
+			.on('error', function(e) {
+                new Elixir.Notification().error(e, 'Hologram Failed!');
 
-	this.registerWatcher('hologram', [
-		this.assetsDir + 'sass/**/*',
-		this.assetsDir + 'scss/**/*',
-		this.assetsDir + 'less/**/*',
+                this.emit('end');
+            })
+			.pipe(new Elixir.Notification().message('Hologram Complete!'));
+	})
+	.watch([
+		config.get('assets.css.sass.folder') + '/**/*',
+		config.get('assets.css.less.folder') + '/**/*'
 	]);
-
-	return this.queueTask('hologram');
 });
