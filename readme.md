@@ -43,4 +43,4 @@ elixir(function(mix) {
 
 ## Hologram — Style Documentation Build System
 
-To learn more about Hologram visit https://github.com/trulia/hologram
+To learn more about Hologram visit [trulia/hologram](https://github.com/trulia/hologram).
