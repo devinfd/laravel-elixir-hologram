@@ -27,9 +27,7 @@ var elixir = require('laravel-elixir');
 require('laravel-elixir-hologram');
 
 elixir(function(mix) {
-    mix.hologram({
-        yml: 'hologram.yml'
-    });
+    mix.hologram('hologram.yml');
 });
 ```
 
